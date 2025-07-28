@@ -40,17 +40,17 @@ boxes.forEach((box) => {
     drawCount++;
     if (turnO) {
       box.style.color = "#008000";
-      msg.innerHTML = "X <span>Turn</span>";
       box.innerText = "O";
       playerO.classList.remove("active-player");
       playerX.classList.add("active-player");
+      msg.innerHTML = "X <span>Turn</span>";
       turnO = false;
     } else {
       box.style.color = "#b0413e";
-      msg.innerHTML = "O <span>Turn</span>";
       box.innerText = "X";
       playerX.classList.remove("active-player");
       playerO.classList.add("active-player");
+      msg.innerHTML = "O <span>Turn</span>";
       turnO = true;
     }
     box.disabled = true;
@@ -61,16 +61,16 @@ boxes.forEach((box) => {
 const disabledBoxes = () => {
   for (const box of boxes) {
     box.disabled = true;
-    game.classList.add("invisible");
   }
+  game.classList.add("invisible");
 };
 
 const enableBoxes = () => {
   for (const box of boxes) {
     box.disabled = false;
-    game.classList.remove("invisible");
     box.innerText = "";
   }
+  game.classList.remove("invisible");
 };
 
 const showWinner = (winner) => {
@@ -80,8 +80,7 @@ const showWinner = (winner) => {
     playerO.classList.add("active-player");
     playerOCountWin++;
     playerOScore.innerText = playerOCountWin;
-  }
-  if (winner === "X") {
+  } else if (winner === "X") {
     playerO.classList.remove("active-player");
     playerX.classList.add("active-player");
     playerXCountWin++;
