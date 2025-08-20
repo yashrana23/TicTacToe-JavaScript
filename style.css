@@ -68,22 +68,21 @@ body {
   font-weight: 600;
 }
 
-#msg span{
+#msg span {
   color: #000;
   font-size: 4.2vmin;
 }
 
 .msg-container {
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
 .invisible {
   opacity: 0.6;
 }
 
-
 .score-container {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,7 +93,7 @@ body {
 .player {
   width: 150px;
   color: #fff;
-  background-color: #1F1F1F;
+  background-color: #1f1f1f;
   border: 1.5px solid #9e9e9e;
   border-radius: 8px;
   line-height: 20px;
@@ -106,10 +105,50 @@ body {
   font-size: 1.8rem;
 }
 
-#player-o-score, #player-x-score {
+#player-o-score,
+#player-x-score {
   font-size: 1.5rem;
 }
 
 .active-player {
   border-bottom: 3px solid #fff;
+}
+
+@media (max-width: 568px) {
+  .game {
+    height: 70vmin;
+    width: 70vmin;
+  }
+
+  .box {
+    height: 20vmin;
+    width: 20vmin;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    height: 50vh;
+  }
+  .game {
+    height: 80vmin;
+    width: 80vmin;
+  }
+
+  .box {
+    height: 24vmin;
+    width: 24vmin;
+  }
+}
+
+@media (max-width: 360px) {
+  .game {
+    height: 90vmin;
+    width: 90vmin;
+  }
+
+  .box {
+    height: 28vmin;
+    width: 28vmin;
+  }
 }
